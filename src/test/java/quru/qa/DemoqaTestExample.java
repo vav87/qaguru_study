@@ -49,16 +49,17 @@ public class DemoqaTestExample {
         $("#stateCity-wrapper").$(byText("Jaipur")).click();
         $("#submit").click();
 
-        $(".table-responsive").shouldHave(text("Ivan Ivanov"));
-        $(".table-responsive").shouldHave(text("ivanivanov@mail.com"));
-        $(".table-responsive").shouldHave(text("Male"));
-        $(".table-responsive").shouldHave(text("8777711122"));
-        $(".table-responsive").shouldHave(text("29 April,1987"));
-        $(".table-responsive").shouldHave(text("English"));
-        $(".table-responsive").shouldHave(text("Sports"));
-        $(".table-responsive").shouldHave(text("image.png"));
-        $(".table-responsive").shouldHave(text("Street, house"));
-        $(".table-responsive").shouldHave(text("Rajasthan Jaipur"));
+        $(".table-responsive").shouldHave(text("Ivan Ivanov"),
+                text("ivanivanov@mail.com"),
+                text("Male"),
+                text("8777711122"),
+                text("29 April,1987"),
+                text("English"),
+                text("Sports"),
+                text("image.png"),
+                text("Street, house"),
+                text("Rajasthan Jaipur"));
+
         $("#closeLargeModal").click();
 
 
