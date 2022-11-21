@@ -20,9 +20,9 @@ public class RegistrationForm {
     private final SelenideElement firstName = $("#firstName");
     private final SelenideElement lastName = $("#lastName");
     private final SelenideElement userEmail = $("#userEmail");
-    private final SelenideElement maleGender = $(By.xpath("//div[@id='genterWrapper']/div/div/input[@id='gender-radio-1']"));
-    private final SelenideElement femaleGender = $(By.xpath("//div[@id='genterWrapper']/div/div/input[@id='gender-radio-2']"));
-    private final SelenideElement otherGender = $(By.xpath("//div[@id='genterWrapper']/div/div/input[@id='gender-radio-3']"));
+    private final SelenideElement maleGender = $("#gender-radio-1");
+    private final SelenideElement femaleGender = $("#gender-radio-2");
+    private final SelenideElement otherGender = $("#gender-radio-3");
     private final SelenideElement userNumber = $("#userNumber");
     private final SelenideElement birthDateComponent = $("#dateOfBirthInput");
     private final SelenideElement subjectsContainer = $("#subjectsContainer");

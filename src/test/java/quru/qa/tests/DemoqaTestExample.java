@@ -1,8 +1,7 @@
-package quru.qa;
+package quru.qa.tests;
 
 import org.junit.jupiter.api.Test;
 import quru.qa.pages.data.UserData;
-import quru.qa.tests.BaseTest;
 
 public class DemoqaTestExample extends BaseTest {
 
