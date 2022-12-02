@@ -8,8 +8,9 @@ repositories {
 
 dependencies {
     testImplementation (
-            'com.codeborne:selenide:6.9.0',
-            'org.junit.jupiter:junit-jupiter:5.9.0'
+            "com.codeborne:selenide:6.9.0",
+            "org.junit.jupiter:junit-jupiter:5.9.0",
+            "com.github.javafaker:javafaker:1.0.2",
     )
 }
 

@@ -9,10 +9,13 @@ import quru.qa.pages.data.GenderEnum;
 import java.io.File;
 import java.util.List;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationForm {
+
+    private final String TITLE_TEXT = "Student Registration Form";
 
     private CalendarComponent calendarComponent = new CalendarComponent();
     private RegistrationModal registrationModal = new RegistrationModal();
@@ -37,6 +40,7 @@ public class RegistrationForm {
 
     public RegistrationForm openForm() {
         open("/automation-practice-form");
+        $(".practice-form-wrapper").shouldHave(text(TITLE_TEXT));
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
         return this;
