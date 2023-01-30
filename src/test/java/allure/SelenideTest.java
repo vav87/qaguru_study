@@ -23,6 +23,6 @@ public class SelenideTest {
 
         $(linkText("spring-projects/spring-boot")).click();
         $("#issues-tab").click();
-        $(withText("#34008")).should(Condition.exist);
+        $(withText("#34008")).should(Condition.visible);
     }
 }

@@ -34,6 +34,6 @@ public class WebSteps {
 
     @Step("Checking existence of the issue")
     public void checkIssueExists(int issue) {
-        $(withText("#"+issue)).should(Condition.exist);
+        $(withText("#"+issue)).should(Condition.visible);
     }
 }

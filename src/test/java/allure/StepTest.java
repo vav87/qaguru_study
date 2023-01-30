@@ -39,7 +39,7 @@ public class StepTest {
         });
 
         step("Checking existence of issue with number "+ISSUE, () -> {
-            $(withText("#"+ISSUE)).should(Condition.exist);
+            $(withText("#"+ISSUE)).should(Condition.visible);
         });
     }
 
