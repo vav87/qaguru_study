@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jan 31 21:52:47 GMT 2023","Tue Jan 31 21:52:55 GMT 2023","7174","","allure.SelenideTest","","allure.SelenideTest","testIssueSearch","testIssueSearch()",""
+"passed","Tue Jan 31 21:52:55 GMT 2023","Tue Jan 31 21:52:58 GMT 2023","2924","","allure.StepTest","","allure.StepTest","testAnnotatedStep","testAnnotatedStep()",""
+"passed","Tue Jan 31 21:52:58 GMT 2023","Tue Jan 31 21:53:00 GMT 2023","2448","","allure.StepTest","","allure.StepTest","testLambdaStep","testLambdaStep()",""

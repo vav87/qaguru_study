@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"5e3e800915b28e1bc894fc5f80fd6667","name":"allure.StepTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}},{"uid":"9727a26a2f1c6d12ad3e74fbb5de9fe5","name":"allure.SelenideTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
