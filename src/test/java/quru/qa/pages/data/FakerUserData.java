@@ -24,7 +24,7 @@ public class FakerUserData {
         this.email = faker.internet().emailAddress();
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy:MMMM:dd", Locale.ENGLISH);
-        String date = format.format(faker.date().birthday(18, 100));
+        String date = format.format(faker.date().birthday(18, 50));
         String[] dateParts = date.split(":");
         birthDate = new BirthDate(dateParts[0], dateParts[1], dateParts[2]);
 
