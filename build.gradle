@@ -6,18 +6,29 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation (
-            "com.codeborne:selenide:6.9.0",
-            "org.junit.jupiter:junit-jupiter:5.9.0",
-            "com.github.javafaker:javafaker:1.0.2",
-    )
-}
-
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
+
+//    testLogging {
+//        lifecycle {
+//            events "started", "skipped", "failed", "standard_error", "standard_out"
+//            exceptionFormat "short"
+//        }
+//    }
+}
+
+dependencies {
+    testImplementation (
+            "com.github.javafaker:javafaker:1.0.2",
+            'com.codeborne:selenide:6.10.3',
+            'org.junit.jupiter:junit-jupiter:5.9.0'
+    )
+
+    testRuntimeOnly(
+            "org.slf4j:slf4j-simple:2.0.5"
+    )
 }

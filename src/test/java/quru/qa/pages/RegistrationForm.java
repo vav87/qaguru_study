@@ -41,8 +41,8 @@ public class RegistrationForm {
     public RegistrationForm openForm() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text(TITLE_TEXT));
-        executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
         return this;
     }
 
