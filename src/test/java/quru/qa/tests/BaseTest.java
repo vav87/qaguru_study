@@ -6,6 +6,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import quru.qa.helpers.Attach;
 import quru.qa.pages.RegistrationForm;
 
@@ -14,13 +15,18 @@ public class BaseTest {
     protected RegistrationForm registrationForm = new RegistrationForm();
 
     @BeforeAll
-    static void beforeAll() {
+    static void setUp() {
         Configuration.holdBrowserOpen = false;
         Configuration.browserSize = "1280x720";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.headless = false;
         Configuration.timeout = 10000;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
