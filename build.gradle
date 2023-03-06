@@ -1,22 +1,43 @@
 plugins {
     id 'java-library'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+allure {
+    report {
+        version.set("2.20.0")
+    }
+    adapter { // отвечает за появление папочки build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
+        frameworks {
+            junit5 { //название фреймворка
+                adapterVersion.set("2.20.0") //версия интеграции фреймворка и Allure
+            }
+        }
+    }
 }
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation (
-            'com.codeborne:selenide:6.9.0',
-            'org.junit.jupiter:junit-jupiter:5.9.0'
-    )
-}
-
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation (
+            "com.github.javafaker:javafaker:1.0.2",
+            'com.codeborne:selenide:6.10.3',
+            'org.junit.jupiter:junit-jupiter:5.9.0',
+            "io.qameta.allure:allure-selenide:2.20.0"
+    )
+
+    testRuntimeOnly(
+            "org.slf4j:slf4j-simple:2.0.5"
+    )
 }
