@@ -8,11 +8,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import quru.qa.helpers.Attach;
-import quru.qa.pages.RegistrationForm;
+import quru.qa.pages.MainPage;
 
 public class BaseTest {
 
-    protected RegistrationForm registrationForm = new RegistrationForm();
+    protected MainPage mainPage = new MainPage();
 
     @BeforeAll
     static void setUp() {
@@ -20,7 +20,7 @@ public class BaseTest {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1280x720");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = "https://education.dhabits.ru/";
         Configuration.headless = false;
         Configuration.timeout = 10000;
         Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
