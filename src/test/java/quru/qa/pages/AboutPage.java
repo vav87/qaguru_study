@@ -3,19 +3,15 @@ package quru.qa.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.*;
 
-public class AboutPage {
+public class AboutPage extends AbstractPage {
 
     private final SelenideElement contactsLink = $("[href=\"/about/contacts/\"]");
 
-    private final SelenideElement contactsTitle = $("h1").$(byText("Контакты"));
+    private final SelenideElement contactsTitle = $(byText("Контакты"));
 
-    private final SelenideElement aboutTitle = $("h1").$(byText("О компании"));
-
-    public SelenideElement getContactsLink() {
-        return contactsLink;
-    }
+    private final SelenideElement aboutTitle = $(byText("О компании"));
 
     public SelenideElement getContactsTitle() {
         return contactsTitle;
@@ -23,5 +19,9 @@ public class AboutPage {
 
     public SelenideElement getAboutTitle() {
         return aboutTitle;
+    }
+
+    public void clickOnContactsLink() {
+        contactsLink.click();
     }
 }

@@ -5,13 +5,13 @@ plugins {
 
 allure {
     report {
-        version.set("2.20.0")
+        version.set("2.20.1")
     }
     adapter { // отвечает за появление папочки build/allure-results
         aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
             junit5 { //название фреймворка
-                adapterVersion.set("2.20.0") //версия интеграции фреймворка и Allure
+                adapterVersion.set("2.20.1") //версия интеграции фреймворка и Allure
             }
         }
     }
@@ -21,23 +21,35 @@ repositories {
     mavenCentral()
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
-tasks.withType(Test) {
-    useJUnitPlatform()
-}
-
 dependencies {
     testImplementation (
-            "com.github.javafaker:javafaker:1.0.2",
-            'com.codeborne:selenide:6.10.3',
-            'org.junit.jupiter:junit-jupiter:5.9.0',
-            "io.qameta.allure:allure-selenide:2.20.0"
+            'com.codeborne:selenide:6.12.3',
+            'org.junit.jupiter:junit-jupiter:5.9.2',
+            'io.qameta.allure:allure-selenide:2.21.0',
+            'org.aeonbits.owner:owner:1.0.12'
     )
 
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:2.0.5"
     )
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+}
+
+task ui_test(type: Test){
+    systemProperties(System.getProperties())
+    useJUnitPlatform{
+        includeTags("UI_test")
+    }
 }

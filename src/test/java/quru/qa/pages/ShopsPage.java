@@ -5,9 +5,9 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class ShopsPage {
+public class ShopsPage extends AbstractPage {
 
-    private final SelenideElement searchShopTitle = $("h2").$(byText("Поиск магазина"));
+    private final SelenideElement searchShopTitle = $(byText("Поиск магазина"));
 
     private final SelenideElement inputBox = $("#vm").$("input");
 
