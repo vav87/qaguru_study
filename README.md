@@ -2,7 +2,7 @@
 1. Выберите вакансию
 2. Напишите на неё автотестов (5-10, простых, главное не тратьте на это много времени!)
 3. Сделайте джобу в Jenkins, добавьте Allure отчёт, уведомления в чат Telegram, Selenoid.
-4*. Добавьте интеграцию с Allure Testops, добавьте пару ручных тестов  (акцентируйте на этом в github readme)
+   4*. Добавьте интеграцию с Allure Testops, добавьте пару ручных тестов  (акцентируйте на этом в github readme)
 5. Добавьте интеграцию с Jira
 6. Оформите всё со скриншотами в readme.md
 
@@ -11,17 +11,17 @@
 - Если вы не находитесь в поиске работы, просто сбросьте всё вышеуказанное на ревью.
 
 # :bookmark_tabs: Содержание
-- [Технологии](#bookmark-технологии)
-- [Реализованные тесты](#bookmark-реализованные-тесты)
-- Запуск тестов из терминала
-- Прогон тестов в Jenkins
-- Allure-отчеты
-- Интеграция с Allure TestOps
-- Интеграция с Jira
-- Уведомления в Telegram боте
-- Видео прогона теста в Selenoid
+- [Технологии](#технологии)
+- [Реализованные тесты](#реализованные-тесты)
+- [Запуск тестов из терминала](#запуск-тестов-из-терминала)
+- [Прогон тестов в Jenkins](#прогон-тестов-в-Jenkins)
+- [Allure-отчеты](#allure-отчеты)
+- [Интеграция с Allure TestOps](#интеграция-с-Allure-TestOps)
+- [Интеграция с Jira](#интеграция-с-Jira)
+- [Уведомления в Telegram боте](#уведомления-в-Telegram-боте)
+- [Видео прогона теста в Selenoid](#видео-прогона-теста-в-Selenoid)
 
-## :bookmark: Технологии
+## Технологии
 <a href="https://www.jetbrains.com/idea/"><img src="src/test/resources/icons/IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="src/test/resources/icons/Java.svg" width="50" height="50"  alt="Java"/></a>
 <a href="https://github.com/"><img src="src/test/resources/icons/Github.svg" width="50" height="50"  alt="Github"/></a>
@@ -34,15 +34,15 @@
 <a><img src="src/test/resources/icons/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>
 <a><img src="src/test/resources/icons/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 
-## :bookmark: Реализованные тесты
+## Реализованные тесты
 
-- Проверить раздел "О нас"
-- Проверить раздел "Акции"
-- Проверить раздел "Магазины" в меню заголовка
-- Проверить фунуционал поиска
-- Проверить фунуционал корзины
-- Проверить раздел "Помощь 24/7"
-- Проверить функционал аутентификации
+- :white_check_mark: Проверить раздел "О нас"
+- :white_check_mark: Проверить раздел "Акции"
+- :white_check_mark: Проверить раздел "Магазины" в меню заголовка
+- :white_check_mark: Проверить фунуционал поиска
+- :white_check_mark: Проверить фунуционал корзины
+- :white_check_mark: Проверить раздел "Помощь 24/7"
+- :white_check_mark: Проверить функционал аутентификации
 
 ## Запуск тестов из терминала
 
@@ -79,3 +79,11 @@
 ## Уведомления в Telegram боте
 
 ![](src/test/resources/images/telegram_report.jpg)
+
+## Видео прогона теста в Selenoid
+
+[![](src/test/resources/video/video_preview.png)](src/test/resources/video/selenoid.mp4)
+
+
+<video src="src/test/resources/video/selenoid.mp4" controls="controls" style="max-width: 730px">
+</video>
