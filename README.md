@@ -82,8 +82,6 @@
 
 ## Видео прогона теста в Selenoid
 
-[![](src/test/resources/video/video_preview.png)](src/test/resources/video/selenoid.mp4)
+https://user-images.githubusercontent.com/32894442/227956410-b52c5ec0-c737-43af-a42c-220b9917f9fa.mp4
 
 
-<video src="src/test/resources/video/selenoid.mp4" controls="controls" style="max-width: 730px">
-</video>
