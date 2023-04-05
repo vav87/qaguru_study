@@ -17,17 +17,18 @@ public interface WebDriverConfig extends Config {
     @DefaultValue("100.0")
     String getBrowserVersion();
 
+    @Key("remoteUrl")
+    String getRemoteURL();
+
     @Key("browserSize")
     @DefaultValue("1280x720")
     String getBrowserSize();
-
-    @Key("remoteUrl")
-    String getRemoteURL();
 
     @Key("holdBrowserOpen")
     @DefaultValue("false")
     boolean getHoldBrowserOpen();
 
-    @Key("headless")
-    boolean getHeadless();
+    @Key("pageLoadTimeout")
+    @DefaultValue("30000")
+    long getPageLoadTimeout();
 }

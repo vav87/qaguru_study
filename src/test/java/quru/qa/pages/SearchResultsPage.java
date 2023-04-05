@@ -8,11 +8,11 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage extends AbstractPage {
 
-    private ElementsCollection products = $$("#products-wrapper");
+    private final ElementsCollection products = $$("#products-wrapper");
 
-    private ElementsCollection productList = $$("li");
+    private final ElementsCollection productList = $$("li");
 
-    private SelenideElement product = $("li");
+    private final SelenideElement product = $("li");
 
     public SelenideElement getFirstProduct() {
         return $$("#products-wrapper").first().$$("ul").first().$("li");

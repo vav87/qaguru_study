@@ -28,6 +28,7 @@ public class PetshopTest extends BaseTest {
         });
         step("Check the Contacts link", () -> {
             aboutPage.clickOnContactsLink();
+            aboutPage.removePermissionPopUps();
             aboutPage.getContactsTitle().shouldBe(Condition.visible);
         });
     }
@@ -106,6 +107,7 @@ public class PetshopTest extends BaseTest {
         });
         step("Choose the first item", () -> {
             searchResultsPage.removePermissionPopUps();
+            searchResultsPage.removeCookiePopUp();
             searchResultsPage.getFirstProduct().$("a").click();
         });
         step("Add item to cart", () -> {
